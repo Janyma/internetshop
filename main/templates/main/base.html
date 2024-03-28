@@ -7,8 +7,17 @@
     </head>
     <body>
         <main>
+            {%if messages%}
+            {%for message in messages%}
+            <div class="alert alert-{{message.tags}}">
+                {{message}}</div>{%endfor%}
+            {%endif%}
+
+
             {%block content%}
             {%endblock%}
+
+
         </main>
     </body>
 </html>

@@ -18,13 +18,17 @@ from django.contrib import admin
 from django.urls import path, include
 from main import views
 from django.views.generic.base import TemplateView
+from users import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('main/', include("django.contrib.auth.urls")),
-    path('main/', include("main.urls")),
+    path('register/', user_views.register, name='register'),
+    path('', include('main.urls')),
+
+   # path('main/', include("django.contrib.auth.urls")),
+   # path('main/', include("main.urls")),
    # path('main/login/', views.login),
    # path('registration/', views.register),
-    path("", TemplateView.as_view(template_name="shopview.html"), name="shopview"),
+   # path("", TemplateView.as_view(template_name="shopview.html"), name="shopview"),
     #path('shopview/', views.shopview),
 ]
