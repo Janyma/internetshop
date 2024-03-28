@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
+    'crispy_bootstrap4',
    # 'main',
 ]
 
@@ -128,5 +129,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL="shopview"
-LOGOUT_REDIRECT_URL="shopview"
+LOGIN_REDIRECT_URL="blog-home"
+LOGIN_URL= 'login'
+#LOGOUT_REDIRECT_URL="shopview"
