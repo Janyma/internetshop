@@ -1,7 +1,12 @@
 {% extends "main/base.html"%}
-{% load crispy_forms_tags%}
-{%block content%}
 
+{%block content%}
+<h1>test profile</h1>
+<form method="GET">
+    {%csrf_token%}
+    {{form}}
+
+</form>
 <div class="content-section">
     <div class="media">
         <h2>{{user.username}}</h2>

@@ -4,9 +4,9 @@ from django.http import HttpResponse
 from .models import Product
 
 def product(request):
-   model=Product
+   products=Product.objects.all()
    #context ={'title': 'Titel', 'description': 'Description', 'price': 'Price'}
-   return render(request, 'main/home.html', {'product':product})
+   return render(request, 'main/home.html', {'products':products})
 def home(request):
   return HttpResponse('<h1> Main menu</h1>')
 def about(request):

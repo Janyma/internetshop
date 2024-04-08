@@ -1,5 +1,24 @@
 {% extends "main/base.html"%}
 {%block content%}
-<h1>{{product.title}}</h1>
+<table>
+    <tr>
+        <td>Titel</td>
+        <td>Description</td>
+        <td>Price</td>
+    </tr>
+</table>
+{%for product in products%}
+<table>
+
+    <tr>
+        <td>{{product.title}} :</td>
+        <td>{{product.description}}</td>
+        <td>{{product.price}}</td>
+    </tr>
+</table>
+
+
+{%endfor%}
+
 
 {%endblock content%}
