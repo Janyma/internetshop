@@ -2,18 +2,7 @@
 
 {%block content%}
 <h1>test profile</h1>
-<form method="GET">
-    {%csrf_token%}
-    {{form}}
-
-</form>
-<div class="content-section">
-    <div class="media">
-        <h2>{{user.username}}</h2>
-
-    </div>
-
-</div>
+<p><strong>Username:</strong> {{ profile.user.username }}</p>
 
 
 {%endblock content%}
